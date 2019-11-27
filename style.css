@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif !important;
+    color: #222;
+}
+h1{
+    font-weight: 300;
+}
+
+h4{
+    font-weight: 400;
+    padding-top: .5rem;
+    font-size: 1.4rem;
+    padding-bottom: .5rem;
+}
+
+.button {
+    background-color: #3AA936; /* Green */
+    border: none;
+    color: white;
+    padding: 7px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 7px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.button1 {
+    background-color: white; /* Green */
+    border: none;
+    color:black;
+    padding: 7px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 7px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.principal p{
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.5rem;
+}
+header{
+    display: grid;
+    background-color: black;
+    grid-template-areas: 
+    'logo'
+    'hero'
+    ;
+}
+.logo img{
+    margin-top: 0.7rem;
+    margin-bottom: 0.7em;
+    margin-left: 0.7em;
+    width: 200px;
+}
+main{
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-row-gap: 1rem;
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+    'principal      metodo'
+    'funcionamento  metodo'
+    'aulas          aulas'
+    'prime          prime'
+    ;
+}
+
+.principal{
+    grid-area: principal;
+}
+
+.hero{
+    grid-area: hero;
+}
+
+.hero img{
+    width: 100vw; 
+}
+
+.funcionamento{
+    display: grid;
+    grid-area: funcionamento;
+    grid-template-columns: 8rem 14rem;
+    grid-template-areas: 
+    'dias       horas'
+    'contato    contato';
+}
+
+.dias{
+    grid-area: dias;
+    font-weight: 300;
+}
+
+.horas{
+    grid-area: horas;
+    font-weight: 100;
+}
+.contato{
+    grid-area: contato;
+}
+.metodo{
+    grid-area: metodo;
+}
+
+.metodo p{
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 1.5rem;
+}
+
+.aulas{
+    background-color: #f38f00;
+    display: grid;
+    grid-area: aulas;
+    text-align: center;
+    grid-template-areas:
+    'titulo         titulo'
+    'texto_aulas    texto_aulas'
+    'imagem         tabela'
+    'grade          grade'
+    ;
+}
+
+.aulas img{
+    width: 100%;
+    grid-area: imagem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.aulas h4{
+    grid-area: titulo;
+}
+.texto_aulas{
+    grid-area: texto_aulas;
+        padding-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: 100;
+        line-height: 1.5rem;
+    
+}
+.texto_aulas p{
+    padding-bottom: 2rem;
+}
+.tabela{
+    grid-area: tabela;
+    padding-top: 2rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: repeat(7, 1fr); */
+    font-weight: 300;
+}
+
+.grid > span {
+    padding: 8px 4px;
+    border-bottom: 1px solid #ccc;
+}
+
+.grade{
+    display: grid;
+    grid-area: grade;
+    padding-top: 1rem;
+    background-color:#009de3;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 100;
+    color: white;
+    padding-bottom: 1rem;
+    grid-template-areas:
+    'bar bar'
+    'dia imagem_grade'
+    ;
+}
+
+.titulo_grade{
+    grid-area: titulo_grade;
+}
+
+.bar{
+    display: grid;
+    grid-area: bar;
+    grid-template-columns: repeat(6,1fr);
+    justify-content: space-between;
+    
+}
+
+.grade img{
+    grid-area:imagem_grade;
+    width: 8fr;
+
+}
+.hero_bar{
+    grid-area: hero_bar;
+}
+.dia{
+    grid-area: dia;
+    width: 10fr;
+
+}
+
+.prime{
+    font-size: 1rem;
+    background-color: #e6a756;
+    padding-bottom: 2rem;
+    grid-area: prime;
+    font-weight: 100;
+}
+
+.prime img{
+    padding-bottom: 1rem;
+    width: 100%;
+}
+.prime h1{
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.prime h4{
+    padding: .5rem;
+}
+
+.prime p{
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+
+
+@media screen and (max-width: 700px){
+    main{
+        margin: auto;
+        grid-row-gap: 1rem;
+        display: grid;
+        grid-template-areas: 
+        'principal'
+        'funcionamento'
+        'metodo'
+        'aulas'
+        'prime'
+        ;
+    }
+    .aulas{
+        background-color: #f38f00;
+        display: grid;
+        grid-area: aulas;
+        text-align: center;
+        grid-template-areas:
+        'titulo   '
+        'texto_aulas   '
+        'imagem'         
+        'tabela'
+        'grade'
+        ;
+    }
+
+    .grade{
+        display: grid;
+        grid-area: grade;
+        padding-top: 1rem;
+        background-color:#009de3;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 100;
+        color: white;
+        padding-bottom: 1rem;
+        grid-template-areas:
+        'imagem_grade'
+        'bar'
+        'dia'
+        ;
+    }
+    .bar{
+        display: grid;
+        grid-area: bar;
+        grid-template-columns: repeat(6,1fr);
+        justify-content: space-between;
+        
+    }
+    
+
+}
