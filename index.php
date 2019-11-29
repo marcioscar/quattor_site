@@ -44,7 +44,7 @@
                 <!--Modal do formulario -->
          <div class="w3-container">
                 <button onclick="document.getElementById('id01').style.display='block'" 		
-                class="button button2">Agende sua visita</button>
+                class="button button2">Fale Conosco</button>
                 <div id="id01" class="w3-modal">
                 <div class="w3-modal-content w3-animate-top w3-card-4">
                     <header class="w3-container w3-green"> 
